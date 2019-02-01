@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejemplo Sorete</title>
+<style type="text/css">
+body{
+	font-family:Arial, Helvetica, sans-serif
+}
+#divmapa{
+	position:absolute;
+	top:60px;
+	left:10px;
+	width:76px;
+	height:400px;
+	background:url(chile.png) 0 0;
+}
+#divinfo{
+	margin-left:100px;
+	height:200px;
+	font-size:12px;
+	font-weight:bold;
+	padding-top:20px;
+	line-height:1.8em;
+	color:#747474;
+	border-left:1px dashed #DFDFDF;
+	padding-left:10px;
+}
+#divdatoreg{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#DFDFDF;
+	padding:4px 8px;
+}
+</style>
+
+<script type="text/javascript">
+let mapa = (r)=>{
+	let posmapa=-76*r
+	document.getElementById("divmapa").style.background="url(chile.png) "+posmapa+"px";
+	if(r==1) {
+		dregion="XV Region";
+		iregion="Arica";		
+	}
+	if(r==2) {
+		dregion="I Region";
+		iregion="Iquique";
+	}
+
+	if(r==3) {
+		dregion="II Region";
+		iregion="Antofagasta";
+	}
+		
+	if(r==4) {
+		dregion="III Region";
+		iregion="Copiapo";
+	}
+		
+	if(r==5) {
+		dregion="IV Region";
+		iregion="La Serena";
+	}
+		
+	if(r==6) {
+		dregion="V Region";
+		iregion="Valparaiso";
+	}
+		
+	if(r==7) {
+		dregion="VI Region";
+		iregion="Rancagua";
+	}
+		
+	if(r==8) {
+		dregion="Region Metropolitana";
+		iregion="Region Metropolitana";
+	}
+		
+	if(r==9) {
+		dregion="VII Region";
+		iregion="Talca";
+	}
+		
+	if(r==10) {
+		dregion="VIII Region";
+		iregion="Concepcion";
+	}
+		
+	if(r==11) {
+		dregion="IX Region";
+		iregion="Temuco";
+	}
+		
+	if(r==12) {
+		dregion="XIV Region";
+		iregion="Valdivia";
+	}
+		
+	if(r==13) {
+		dregion="X Region";
+		iregion="Puerto Montt";
+	}
+		
+	if(r==14) {
+		dregion="XI Region";
+		iregion="Coyhaique";
+	}
+	
+	if(r==15) {
+		dregion="XII Region";
+		iregion="Punta Arenas";
+	}
+		
+	document.getElementById("divdatoreg").innerHTML=dregion;
+	document.getElementById("divinfo").innerHTML=iregion;
+}
+</script>
+</head>
+
+<body>
+<div id="divdatoreg">Eliga Regi&oacute;n
+</div>
+<div id="divmapa">
+<map name="mapachile">
+<area shape="poly" coords="48,8,42,15,42,21,55,19,54,10" href="#" onmouseover="mapa(1)" />
+<area shape="poly" coords="44,22,55,19,59,23,56,28,57,34,58,37,48,41,43,38" href="#" onmouseover="mapa(2)" />
+<area shape="poly" coords="43,39,59,35,63,50,69,50,68,57,64,63,57,64,58,69,52,73,50,77,40,77" href="#" onmouseover="mapa(3)" />
+<area shape="poly" coords="39,78,47,79,52,74,57,72,58,78,59,87,51,97,47,110,39,106,33,103" href="#" onmouseover="mapa(4)" />
+<area shape="poly" coords="35,107,41,107,48,111,47,116,43,131,33,134,32,117" href="#" onmouseover="mapa(5)" />
+<area shape="poly" coords="35,132,33,139,30,150,36,145,40,139,45,140,46,133,41,131" href="#" onmouseover="mapa(6)" />
+<area shape="poly" coords="47,140,40,140,32,148,36,149,43,149,47,152" href="#" onmouseover="mapa(7)" />
+<area shape="poly" coords="31,149,45,151,44,158,35,158,29,156" href="#" onmouseover="mapa(8)" />
+<area shape="poly" coords="28,155,35,158,44,159,43,170,38,173,25,170" href="#" onmouseover="mapa(9)" />
+<area shape="poly" coords="24,169,38,174,38,188,33,190,25,185,19,190,17,184,19,179,22,179" href="#" onmouseover="mapa(10)" />
+<area shape="poly" coords="18,189,25,186,32,190,38,187,39,193,36,198,34,203,28,203,20,201" href="#" onmouseover="mapa(11)" />
+<area shape="poly" coords="20,201,34,204,33,212,27,214,20,211,17,208" href="#" onmouseover="mapa(12)" />
+<area shape="poly" coords="17,210,25,214,29,214,33,213,32,229,29,237,32,241,33,249,23,244,13,242" href="#" onmouseover="mapa(13)" />
+<area shape="poly" coords="23,245,33,250,33,253,37,254,36,264,33,277,32,284,27,292,28,298,26,304,21,308,11,302,3,300,14,281,5,280,8,270,12,259,11,254,20,255" href="#" onmouseover="mapa(14)" />
+<area shape="poly" coords="3,301,11,304,19,308,19,320,26,324,28,337,32,341,47,342,58,346,57,379,69,380,66,390,54,387,41,382,22,365,11,353,6,336" href="#" onmouseover="mapa(15)" />
+</map>
+<img src="fondomapa.png" width="76" height="400" usemap="#mapachile" border="0" style="z-index:100" />
+</div>
+
+<div id="divinfo" >
+Informaci&oacute;n Regional
+</div>
+</body>
+</html>
